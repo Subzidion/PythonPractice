@@ -11,13 +11,10 @@ for character in board:
         exit()
     currentCount[character.upper()] = currentCount[character.upper()] - 1
 
-def generateCount():
-    for i in range(12, -1, -1):
-        ithCount = []
-        for key, value in currentCount.items():
-            if value is i:
-                ithCount.append(key)
-        if len(ithCount) != 0:
-            print(str(i).rjust(2) + ': ' + '{}'.format(', '.join(sorted(ithCount))))
-
-generateCount()
+for i in range(12, -1, -1):
+    ithCount = []
+    for key, value in currentCount.items():
+        if value is i:
+            ithCount.append(key)
+    if len(ithCount) != 0:
+        print(str(i).rjust(2) + ': ' + '{}'.format(', '.join(sorted(ithCount))))
