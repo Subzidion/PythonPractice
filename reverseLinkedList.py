@@ -1,12 +1,12 @@
 class LinkedList:
-    def __init__(self, nextNode=None):
-        self.nextNode = nextNode
+    def __init__(self, head=None):
+        self.head = head
     
     def __str__(self):
         s = ''
-        if self.nextNode is None:
+        if self.head is None:
             return s
-        currentNode = self.nextNode
+        currentNode = self.head
         while currentNode.nextNode is not None:
             s += str(currentNode) + ' -> '
             currentNode = currentNode.nextNode
@@ -15,13 +15,13 @@ class LinkedList:
 
     def reverse(self):
         prevNode = None
-        currentNode = self.nextNode
+        currentNode = self.head
         while currentNode is not None:
             nextNode = currentNode.nextNode
             currentNode.nextNode = prevNode
             prevNode = currentNode
             currentNode = nextNode
-        self.nextNode = prevNode
+        self.head = prevNode
 
 class Node:
     def __init__(self, data=0, nextNode=None):
