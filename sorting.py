@@ -1,4 +1,11 @@
 def bubbleSort(swapList):
+    """
+    Bubble Sort Algorithm
+    Best:    O(n) 
+    Average: O(n^2)
+    Worst:   O(n^2)
+    Space:   O(1)
+    """
     while True:
         swapMade = False
         for i in range(1,len(swapList)):
